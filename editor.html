@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Моделирование для детей | Редактор</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>3D Kids</h1>
+                <p>Для юных творцов</p>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="editor.html" class="active">Создать фигуру</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="editor">
+            <div class="container">
+                <h2>Создай свою 3D фигуру</h2>
+                
+                <div class="editor-container">
+                    <div class="canvas-container">
+                        <canvas id="3dCanvas"></canvas>
+                    </div>
+                    
+                    <div class="controls">
+                        <div class="control-group">
+                            <h3>Выбери фигуру</h3>
+                            <div class="shapes">
+                                <button data-shape="cube">Куб</button>
+                                <button data-shape="sphere">Шар</button>
+                                <button data-shape="cylinder">Цилиндр</button>
+                                <button data-shape="pyramid">Пирамида</button>
+                            </div>
+                        </div>
+                        
+                        <div class="control-group">
+                            <h3>Размер</h3>
+                            <input type="range" id="sizeControl" min="1" max="10" value="5">
+                        </div>
+                        
+                        <div class="control-group">
+                            <h3>Цвет</h3>
+                            <input type="color" id="colorControl" value="#ff0000">
+                        </div>
+                        
+                        <div class="control-group">
+                            <h3>Вращение</h3>
+                            <div class="rotation-controls">
+                                <button id="rotateX">X</button>
+                                <button id="rotateY">Y</button>
+                                <button id="rotateZ">Z</button>
+                            </div>
+                        </div>
+                        
+                        <button id="saveBtn" class="btn">Сохранить</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 3D Kids. Все права защищены.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/editor.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</body>
+</html>
